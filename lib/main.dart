@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUpScreen(),
+      home: LoginScreen(),
     );
   }
 }
@@ -37,75 +37,77 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Column(
-          children: [
-            const SizedBox(height: 30.0),
-            Center(
-              child: Column(
-                children: [
-                  Image.asset(
-                    'images/logo.png',
-                    height: 150,
-                    width: 150,
-                  ),
-                  const SizedBox(height: 10.0),
-                  const Text(
-                    'elkmash',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 30.0),
+              Center(
+                child: Column(
+                  children: [
+                    Image.asset(
+                      'images/logo.png',
+                      height: 150,
+                      width: 150,
                     ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 30.0),
-            const TextField(
-              decoration: InputDecoration(
-                labelText: 'Email',
-                prefixIcon: Icon(Icons.email),
-                border: OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(height: 20.0),
-            const TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: 'Password',
-                prefixIcon: Icon(Icons.lock),
-                border: OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(height: 10.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text('Remember Me'),
-                Checkbox(
-                    value: rememberme,
-                    onChanged: (value) {
-                      rememberme = value!;
-                      setState(() {});
-                    }),
-              ],
-            ),
-            const SizedBox(height: 20.0),
-            MaterialButton(
-              color: Colors.blue,
-              onPressed: () {},
-              child: const Text('Sign In'),
-            ),
-            const SizedBox(height: 10.0),
-            const Center(
-              child: Text(
-                "Don't have an account? Sign Up",
-                style: TextStyle(
-                  color: Colors.blue,
-                  decoration: TextDecoration.underline,
+                    const SizedBox(height: 10.0),
+                    const Text(
+                      'elkmash',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ),
-          ],
+              const SizedBox(height: 30.0),
+              const TextField(
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  prefixIcon: Icon(Icons.email),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(height: 20.0),
+              const TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  prefixIcon: Icon(Icons.lock),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(height: 10.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('Remember Me'),
+                  Checkbox(
+                      value: rememberme,
+                      onChanged: (value) {
+                        rememberme = value!;
+                        setState(() {});
+                      }),
+                ],
+              ),
+              const SizedBox(height: 20.0),
+              MaterialButton(
+                color: Colors.blue,
+                onPressed: () {},
+                child: const Text('Sign In'),
+              ),
+              const SizedBox(height: 10.0),
+              const Center(
+                child: Text(
+                  "Don't have an account? Sign Up",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
