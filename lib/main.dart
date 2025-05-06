@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: SignUpScreen(),
     );
   }
 }
@@ -45,13 +45,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   children: [
                     Image.asset(
-                      'images/logo.png',
+                      'images/flutter.png',
                       height: 150,
                       width: 150,
                     ),
                     const SizedBox(height: 10.0),
                     const Text(
-                      'elkmash',
+                      'amrahmed',
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
@@ -144,12 +144,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
               child: Column(
                 children: [
                   Image.asset(
-                    'images/logo.png', // Replace with your logo path
+                    'images/flutter.png', // Replace with your logo path
                     height: 100,
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    'Elkmash',
+                    'amrahmed',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ],
